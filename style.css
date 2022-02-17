@@ -1,3 +1,12 @@
 .fade {
     transition: 0.2s linear;
 }
+.nav-menu{
+    display: flex;
+    transition: 0.5s linear;
+    height: fit-content;
+    position: absolute; right: 10px; top: 70px;
+}
+.noDisplay {
+    position: absolute; right: -190px; top: 70px;
+}
