@@ -10,3 +10,7 @@
 .noDisplay {
     position: absolute; right: -190px; top: 70px;
 }
+.burger:hover {
+    opacity: 0.5;
+    transition: 0.1s linear;
+}
