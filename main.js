@@ -35,7 +35,7 @@ let rodomasAsmuo = person[0];
 // NAV Button
 const menuButton = document.createElement('button')
 menuButton.style = `width: fit-content; display:flex; align-items: center; justify-content: center; border: unset; position: absolute;
-right: 5px`
+right: 5px; background-color: unset;`
 const menuIcon = document.createElement('img')
 menuIcon.classList.add('burger')
 menuIcon.style = `width: 40px; cursor: pointer;`
@@ -48,6 +48,12 @@ document.addEventListener('focusout', ()=>{
     }
 })
 menuIcon.addEventListener('mouseup', ()=>{
+    
+    if(navDiv.classList.contains('noDisplay')){
+        setTimeout(()=>{navDiv.classList.remove('hidden')}, 10)
+    } else {
+        setTimeout(()=>{navDiv.classList.add('hidden')}, 500)
+    }
     setTimeout(()=>{navDiv.classList.toggle('noDisplay')}, 50)
 })
 app.append(menuButton)
@@ -57,7 +63,7 @@ menuButton.append(menuIcon)
 const navDiv = document.createElement('div')
 navDiv.style = `z-index: 1;flex-wrap: wrap; flex-direction: column; gap: 15px;
  border: 2px solid black; border-radius: 10px; background-color: gray; color: black; padding: 20px; text-align:center;`
-navDiv.classList.add('nav-menu', 'noDisplay')
+navDiv.classList.add('nav-menu', 'noDisplay', 'hidden')
 const zmogus1 = document.createElement('a')
 zmogus1.textContent = 'Daimonas'
 const zmogus2 = document.createElement('a')

@@ -14,3 +14,6 @@
     opacity: 0.5;
     transition: 0.1s linear;
 }
+.hidden {
+    display: none;
+}
